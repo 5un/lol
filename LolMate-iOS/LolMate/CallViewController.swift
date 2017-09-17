@@ -12,18 +12,25 @@ import AVFoundation
 
 class CallViewController: UIViewController, EMCallManagerDelegate {
     
+    var callId: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let callName = "user2"
         EMClient.shared().callManager.add!(self, delegateQueue: nil)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let callName = "user2"
+
         EMClient.shared().callManager.start!(EMCallTypeVoice, remoteName: callName, ext: "") { (session, error) in
             print("started call!")
             
+            self.callId = session?.callId
+            
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,18 +38,30 @@ class CallViewController: UIViewController, EMCallManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func btnLeaveClicked(_ sender: Any) {
+        if(callId != nil) {
+            EMClient.shared().callManager.endCall!(callId!, reason: EMCallEndReasonHangup)
+        }
+    }
+    
+    
     func callDidReceive(_ aSession: EMCallSession!) {
         print("--- callDidReceive")
-        let avAudioSession = AVAudioSession.sharedInstance()
-        do {
-            try avAudioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
-            try avAudioSession.setActive(true)
-            
-            self.view.addSubview(aSession.localVideoView)
-            self.view.addSubview(aSession.remoteVideoView)
-        } catch  {
-            print("caught error")
+        DispatchQueue.main.async() {
+            let avAudioSession = AVAudioSession.sharedInstance()
+            do {
+                try avAudioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+                try avAudioSession.setActive(true)
+                
+                
+                self.view.addSubview(aSession.localVideoView)
+                self.view.addSubview(aSession.remoteVideoView)
+            } catch  {
+                print("caught error")
+            }
+
         }
+        
         
     }
     
@@ -54,6 +73,8 @@ class CallViewController: UIViewController, EMCallManagerDelegate {
     func callDidAccept(_ aSession: EMCallSession!) {
         print("--- callDidAccept")
     }
+    
+    
     
 }
 

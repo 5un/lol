@@ -242,6 +242,9 @@ The bartender asks, "Why the big pause?"</string>
                                 <state key="normal" title="LEAVE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnLeaveClicked:" destination="Mo6-9f-cSK" eventType="touchUpInside" id="jn3-5n-1ig"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
