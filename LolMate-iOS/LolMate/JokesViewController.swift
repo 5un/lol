@@ -11,7 +11,7 @@ import UIKit
 import Hyphenate
 import pop
 
-class JokesViewController: UIViewController {
+class JokesViewController: UIViewController, UIViewControllerTransitioningDelegate, MatchedViewControllerDelegate {
     
     @IBOutlet weak var btnLol: UIButton!
     @IBOutlet weak var btnNo: UIButton!
@@ -62,7 +62,7 @@ class JokesViewController: UIViewController {
         spring?.springSpeed = 5
         btnLol.layer.pop_add(spring!, forKey: "animSize")
         
-        // callMatchedUser()
+        matchedUser()
         nextJoke()
 
     }
@@ -111,8 +111,34 @@ class JokesViewController: UIViewController {
         }
     }
     
-    func callMatchedUser() {
-        self.performSegue(withIdentifier: "callMatchedUser", sender: nil)
+    func matchedUser() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "matchedViewController")
+        //vc?.transitioningDelegate = self
+        if let mvc = vc as? MatchedViewController {
+            mvc.delegate = self
+        }
+        vc?.modalPresentationStyle = UIModalPresentationStyle.formSheet
+        
+        self.navigationController?.present(vc!, animated: true, completion: nil)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentingAnimationController()
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissingAnimationController()
+    }
+    
+    func matchedViewControllerOnCallClicked() {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "callViewController") as? CallViewController
+        if(vc != nil) {
+            vc!.callee = "crystal"
+            self.navigationController?.pushViewController(vc!, animated: true)
+        }
+    }
+    
+    func matchedViewControllerOnNoClicked() {
         
     }
     

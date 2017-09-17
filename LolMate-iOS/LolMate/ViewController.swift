@@ -11,6 +11,10 @@ import Hyphenate
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,8 +26,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func btnLoginClicked(_ sender: Any) {
-        let username = "johndoe"
-        let password = "password"
+        let username = txtUsername.text ?? "johndoe"
+        let password = txtPassword.text ?? "password"
         
         // TODO Login with read acc
         EMClient.shared().login(withUsername: username, password: password) { (username, error) in

@@ -13,22 +13,30 @@ import AVFoundation
 class CallViewController: UIViewController, EMCallManagerDelegate {
     
     var callId: String?
+    var callee: String?
+    
+    @IBOutlet weak var lblCalleeName: UILabel!
+    @IBOutlet weak var lblTimeCountDown: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         EMClient.shared().callManager.add!(self, delegateQueue: nil)
+        lblCalleeName.text = self.callee!
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let callName = "user2"
 
-        EMClient.shared().callManager.start!(EMCallTypeVoice, remoteName: callName, ext: "") { (session, error) in
+        EMClient.shared().callManager.start!(EMCallTypeVoice, remoteName: self.callee, ext: "") { (session, error) in
             print("started call!")
             
             self.callId = session?.callId
+            DispatchQueue.main.async() {
+                self.lblTimeCountDown.text = "Dailing..."
+            }
             
         }
     }
@@ -56,6 +64,7 @@ class CallViewController: UIViewController, EMCallManagerDelegate {
                 try avAudioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
                 try avAudioSession.setActive(true)
                 
+                self.lblTimeCountDown.text = "10.00"
                 
                 self.view.addSubview(aSession.localVideoView)
                 self.view.addSubview(aSession.remoteVideoView)
