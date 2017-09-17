@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		913BFE30A9F2AC157B3F34AB /* Pods_LolMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D28CBB90A641C340F912500 /* Pods_LolMate.framework */; };
+		A44C2FD71F6E9C80004B2093 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44C2FD61F6E9C80004B2093 /* MockData.swift */; };
 		A465BBC21F6E41A300560A13 /* LOLAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465BBC11F6E41A300560A13 /* LOLAPI.swift */; };
 		A465BBC41F6E43EA00560A13 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465BBC31F6E43EA00560A13 /* ProfileViewController.swift */; };
 		A465BBC71F6E447100560A13 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465BBC61F6E447100560A13 /* AppConstants.swift */; };
@@ -48,6 +49,7 @@
 		5B92DA52A15F81C0249ABD08 /* Pods-LolMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LolMate/Pods-LolMate.debug.xcconfig"; sourceTree = "<group>"; };
 		5D28CBB90A641C340F912500 /* Pods_LolMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68591AA3CD414DAB59253E31 /* Pods-LolMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-LolMate/Pods-LolMate.release.xcconfig"; sourceTree = "<group>"; };
+		A44C2FD61F6E9C80004B2093 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		A465BBC11F6E41A300560A13 /* LOLAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LOLAPI.swift; sourceTree = "<group>"; };
 		A465BBC31F6E43EA00560A13 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A465BBC61F6E447100560A13 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A465BBC61F6E447100560A13 /* AppConstants.swift */,
+				A44C2FD61F6E9C80004B2093 /* MockData.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4D0C3891F6DF11E00F64BE8 /* ViewController.swift in Sources */,
+				A44C2FD71F6E9C80004B2093 /* MockData.swift in Sources */,
 				A4D0C3B51F6DF36F00F64BE8 /* JokesViewController.swift in Sources */,
 				A48948301F6E242800A0C0C3 /* MatchedUserViewController.swift in Sources */,
 				A465BBC71F6E447100560A13 /* AppConstants.swift in Sources */,

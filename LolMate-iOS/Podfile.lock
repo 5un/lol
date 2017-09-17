@@ -10,6 +10,7 @@ PODS:
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
     - SDWebImage (!= 3.7.2, ~> 3.7)
+  - pop (1.0.10)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - Hyphenate (~> 3.3.2)
   - MJRefresh
   - MWPhotoBrowser (~> 2.1.2)
+  - pop (~> 1.0)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -30,8 +32,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: '098e97e6176540799c27e804c96653ee0833d13c'
 
-PODFILE CHECKSUM: d8ef44e184603ce24069cda92347eeca2500e16c
+PODFILE CHECKSUM: 712e4b75ac6f2a793594907b475878a6aa5a241d
 
 COCOAPODS: 1.2.0

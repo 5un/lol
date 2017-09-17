@@ -90,87 +90,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po6-qe-fJt">
-                                <rect key="frame" x="32" y="128" width="311" height="229.5"/>
-                                <string key="text">A bear walks into a bar and says to the bartender, "I'll have a pint of beer and a.......... packet of peanuts."
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DkT-ZH-boW">
+                                <rect key="frame" x="27" y="110" width="320" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po6-qe-fJt">
+                                        <rect key="frame" x="28" y="29" width="261" height="262.5"/>
+                                        <string key="text">A bear walks into a bar and says to the bartender, "I'll have a pint of beer and a.......... packet of peanuts."
 
 The bartender asks, "Why the big pause?"</string>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="IsC-Qd-ZoG"/>
+                                    <constraint firstItem="po6-qe-fJt" firstAttribute="leading" secondItem="DkT-ZH-boW" secondAttribute="leading" constant="28" id="PR1-wf-doz"/>
+                                    <constraint firstAttribute="width" constant="320" id="f2j-Mn-5pj"/>
+                                    <constraint firstAttribute="trailing" secondItem="po6-qe-fJt" secondAttribute="trailing" constant="31" id="xSc-GF-nsV"/>
+                                    <constraint firstItem="po6-qe-fJt" firstAttribute="centerY" secondItem="DkT-ZH-boW" secondAttribute="centerY" id="yRg-bm-18q"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l13-uU-vZU">
-                                <rect key="frame" x="245" y="456.5" width="100" height="100"/>
+                                <rect key="frame" x="218" y="456" width="100" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.31230095790000001" blue="0.49662454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="UcK-Gs-ILz"/>
                                     <constraint firstAttribute="height" constant="100" id="bDq-IT-TJM"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
-                                <state key="normal" title="LOL">
+                                <state key="normal" title="NAH..">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnLolClicked:" destination="4Aa-ya-yl4" eventType="touchUpInside" id="2YB-fz-eZQ"/>
+                                    <action selector="btnNoClicked:" destination="4Aa-ya-yl4" eventType="touchUpInside" id="6Am-fY-QYw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-0e-Qvg">
-                                <rect key="frame" x="29" y="456.5" width="100" height="100"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="54" y="456" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.320651524591544" green="0.70890724573550978" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="3NO-JQ-kh2"/>
                                     <constraint firstAttribute="height" constant="100" id="F8F-1q-lc1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
-                                <state key="normal" title="NO">
+                                <state key="normal" title="LOL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnNoClicked:" destination="4Aa-ya-yl4" eventType="touchUpInside" id="4me-va-azJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9R-Yi-pSs">
-                                <rect key="frame" x="137" y="456.5" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="3NV-kC-iw1"/>
-                                    <constraint firstAttribute="height" constant="100" id="V5O-s6-XTb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
-                                <state key="normal" title="...">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnNeutralClicked:" destination="4Aa-ya-yl4" eventType="touchUpInside" id="lrN-t6-4if"/>
+                                    <action selector="btnLolClicked:" destination="4Aa-ya-yl4" eventType="touchUpInside" id="qkj-dM-vcy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="a9R-Yi-pSs" firstAttribute="centerX" secondItem="po6-qe-fJt" secondAttribute="centerX" id="C61-ZQ-ena"/>
-                            <constraint firstItem="a9R-Yi-pSs" firstAttribute="top" secondItem="po6-qe-fJt" secondAttribute="bottom" constant="99" id="IJj-hM-f9P"/>
-                            <constraint firstItem="l13-uU-vZU" firstAttribute="leading" secondItem="a9R-Yi-pSs" secondAttribute="trailing" constant="8" id="K9b-Fe-ybD"/>
-                            <constraint firstItem="po6-qe-fJt" firstAttribute="centerX" secondItem="nNR-3Y-2fN" secondAttribute="centerX" id="KR2-0H-Kks"/>
-                            <constraint firstItem="a9R-Yi-pSs" firstAttribute="leading" secondItem="Ty1-0e-Qvg" secondAttribute="trailing" constant="8" id="PCA-q3-ZGB"/>
-                            <constraint firstItem="l13-uU-vZU" firstAttribute="centerY" secondItem="a9R-Yi-pSs" secondAttribute="centerY" id="PW7-Eo-7kj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="po6-qe-fJt" secondAttribute="trailing" constant="16" id="Qr9-q4-mVG"/>
-                            <constraint firstItem="Ty1-0e-Qvg" firstAttribute="centerY" secondItem="a9R-Yi-pSs" secondAttribute="centerY" id="qe1-4u-gdK"/>
-                            <constraint firstItem="po6-qe-fJt" firstAttribute="top" secondItem="Yql-sm-0ct" secondAttribute="bottom" constant="64" id="vgO-36-chh"/>
-                            <constraint firstItem="po6-qe-fJt" firstAttribute="leading" secondItem="nNR-3Y-2fN" secondAttribute="leadingMargin" constant="16" id="zJf-Im-yQZ"/>
+                            <constraint firstItem="l13-uU-vZU" firstAttribute="leading" secondItem="Ty1-0e-Qvg" secondAttribute="trailing" constant="64" id="3Fx-Es-4se"/>
+                            <constraint firstItem="Ty1-0e-Qvg" firstAttribute="top" secondItem="DkT-ZH-boW" secondAttribute="bottom" constant="26" id="3KS-iV-qCo"/>
+                            <constraint firstItem="DkT-ZH-boW" firstAttribute="top" secondItem="Yql-sm-0ct" secondAttribute="bottom" constant="46" id="Ced-hs-4a4"/>
+                            <constraint firstItem="l13-uU-vZU" firstAttribute="top" secondItem="DkT-ZH-boW" secondAttribute="bottom" constant="26" id="Ibb-C0-3wa"/>
+                            <constraint firstItem="l13-uU-vZU" firstAttribute="leading" secondItem="DkT-ZH-boW" secondAttribute="trailing" constant="-129" id="VSd-mk-FJF"/>
+                            <constraint firstItem="DkT-ZH-boW" firstAttribute="centerX" secondItem="nNR-3Y-2fN" secondAttribute="centerX" id="Wh4-Lt-FfE"/>
+                            <constraint firstItem="Ty1-0e-Qvg" firstAttribute="leading" secondItem="nNR-3Y-2fN" secondAttribute="leadingMargin" constant="38" id="xqa-8W-1ut"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l13-uU-vZU" secondAttribute="trailing" constant="41" id="ydG-Gv-Jpm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icon-crazy.png" id="2g1-4T-NkU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="btnLol" destination="l13-uU-vZU" id="DJt-EM-8Qi"/>
-                        <outlet property="btnNeutral" destination="a9R-Yi-pSs" id="sPV-Nx-G0N"/>
-                        <outlet property="btnNo" destination="Ty1-0e-Qvg" id="onr-2l-CV3"/>
+                        <outlet property="btnLol" destination="Ty1-0e-Qvg" id="syk-3h-iBn"/>
+                        <outlet property="btnNo" destination="l13-uU-vZU" id="0wZ-vP-0Ti"/>
+                        <outlet property="lblJokeText" destination="po6-qe-fJt" id="L1g-CE-GiB"/>
+                        <outlet property="viewJokeCard" destination="DkT-ZH-boW" id="hpJ-pn-Jrb"/>
                         <segue destination="Mo6-9f-cSK" kind="show" identifier="callMatchedUser" id="8h4-uD-3DF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQc-DX-vIF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473" y="-594"/>
+            <point key="canvasLocation" x="1472.8" y="-594.15292353823088"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="r9l-NL-DTC">

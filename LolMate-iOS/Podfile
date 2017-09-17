@@ -9,4 +9,5 @@ target 'LolMate' do
     pod 'MJRefresh'
     pod 'MWPhotoBrowser', '~> 2.1.2'
     pod 'DACircularProgress', '~> 2.3.1'
+    pod 'pop', '~> 1.0'
 end

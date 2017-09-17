@@ -59,6 +59,7 @@ class MatchedUserViewController: UIViewController, UITableViewDataSource, UITabl
         if(cell != nil) {
             if let img = cell?.viewWithTag(1) as? UIImageView {
                 img.layer.cornerRadius = 25.0
+                img.image = UIImage(named: "dummy-user-f-\(indexPath.row)")
                 
             }
             
