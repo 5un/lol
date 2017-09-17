@@ -16,6 +16,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var _dataSource: Array<EMMessageModel>?
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var txtMessage: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +85,11 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        return EMChatBaseCell.height(forMessageModel: model)
 //    }
     
+    @IBAction func btnSendMessage(_ sender: Any) {
+        sendTextMessage(text: txtMessage.text!)
+        txtMessage.text = ""
+    }
+    
     func _addMessageToDatasource(message: EMMessage) {
         let model = EMMessageModel.init(withMesage: message)
         _dataSource?.append(model)
@@ -97,7 +104,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 messageId = model!.message!.messageId
             }
             
-            weakSelf?.conversation?.loadMessagesStart(fromId: messageId.characters.count > 0 ? messageId : nil, count: 20, searchDirection: EMMessageSearchDirectionUp, completion: { (messages, error) in
+            weakSelf?.conversation?.loadMessagesStart(fromId: messageId.characters.count > 0 ? messageId : nil, count: 20, searchDirection: EMMessageSearchDirectionDown, completion: { (messages, error) in
                 if error == nil {
                     for message in messages as! Array<EMMessage> {
                         let model = EMMessageModel.init(withMesage: message)
@@ -112,7 +119,42 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             })
         }
     }
+    
+    func sendTextMessage(text:String) {
+        let message = createTextMessage(text, to:conversation!.conversationId, EMChatTypeChat, nil)
+        _sendMessage(message: message)
+    }
 
+    func createTextMessage(_ text: String, to receiver: String, _ chatType: EMChatType, _ ext: Dictionary<String, Any>?) -> EMMessage{
+        let sender = EMClient.shared().currentUsername
+        let body = EMTextMessageBody.init(text: text)
+        let msg = EMMessage.init(conversationID: receiver, from: sender, to: receiver, body: body, ext: ext)
+        
+        msg!.chatType = chatType
+        return msg!
+    }
+    
+    func _sendMessage(message: EMMessage) {
+        _addMessageToDatasource(message: message)
+        tableView.reloadData()
+        weak var weakSelf = self
+        DispatchQueue.global().async {
+            EMClient.shared().chatManager.send(message, progress: nil) { (message, error) in
+                DispatchQueue.main.async {
+                    weakSelf?.tableView.reloadData()
+                    weakSelf?._scrollViewToBottom(animated: true)
+                }
+            }
+        }
+    }
+    
+    func _scrollViewToBottom(animated: Bool) {
+        if tableView.contentSize.height > tableView.frame.height {
+            let point = CGPoint(x: 0, y: tableView.contentSize.height - tableView.frame.height)
+            tableView.setContentOffset(point, animated: true)
+        }
+    }
+    
     
     
     

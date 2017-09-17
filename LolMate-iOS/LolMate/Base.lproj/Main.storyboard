@@ -402,7 +402,7 @@ The bartender asks, "Why the big pause?"</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-Qe-HVe">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy-user-image" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-Qe-HVe">
                                                     <rect key="frame" x="301" y="11" width="50" height="50"/>
                                                     <color key="backgroundColor" red="0.84581560860000005" green="0.84581560860000005" blue="0.84581560860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -410,11 +410,11 @@ The bartender asks, "Why the big pause?"</string>
                                                         <constraint firstAttribute="width" constant="50" id="cUd-ho-nVP"/>
                                                     </constraints>
                                                 </imageView>
-                                                <view tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKe-jr-0rf">
-                                                    <rect key="frame" x="236" y="12" width="65" height="73"/>
+                                                <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jKe-jr-0rf">
+                                                    <rect key="frame" x="30" y="12" width="259" height="73"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-01-jAt">
-                                                            <rect key="frame" x="14" y="13" width="245" height="40"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-01-jAt">
+                                                            <rect key="frame" x="14" y="13" width="237" height="40"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -423,14 +423,16 @@ The bartender asks, "Why the big pause?"</string>
                                                     <color key="backgroundColor" red="1" green="0.1883317595" blue="0.50403283409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="f7N-01-jAt" firstAttribute="top" secondItem="jKe-jr-0rf" secondAttribute="top" constant="13" id="ANv-Uh-und"/>
+                                                        <constraint firstItem="f7N-01-jAt" firstAttribute="leading" secondItem="jKe-jr-0rf" secondAttribute="leading" constant="14" id="bjq-Hh-4ve"/>
                                                         <constraint firstAttribute="bottom" secondItem="f7N-01-jAt" secondAttribute="bottom" constant="9" id="gMF-Ok-Qua"/>
+                                                        <constraint firstAttribute="trailing" secondItem="f7N-01-jAt" secondAttribute="trailing" constant="8" id="zuo-iq-gDr"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="AHl-Qe-HVe" firstAttribute="top" secondItem="OCA-3U-44Y" secondAttribute="topMargin" constant="3" id="1Hg-Ay-gr8"/>
-                                                <constraint firstItem="jKe-jr-0rf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OCA-3U-44Y" secondAttribute="leadingMargin" constant="16" id="CMx-og-xu5"/>
                                                 <constraint firstItem="jKe-jr-0rf" firstAttribute="top" secondItem="AHl-Qe-HVe" secondAttribute="top" id="KSn-uK-6P9"/>
+                                                <constraint firstItem="jKe-jr-0rf" firstAttribute="leading" secondItem="OCA-3U-44Y" secondAttribute="leadingMargin" constant="22" id="Xo2-aK-6Pe"/>
                                                 <constraint firstItem="AHl-Qe-HVe" firstAttribute="leading" secondItem="jKe-jr-0rf" secondAttribute="trailing" constant="16" id="fRT-4d-hTh"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="jKe-jr-0rf" secondAttribute="bottom" constant="7.5" id="mKq-re-AB8"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="AHl-Qe-HVe" secondAttribute="trailing" constant="16" id="yli-q1-BMm"/>
@@ -463,6 +465,9 @@ The bartender asks, "Why the big pause?"</string>
                                         <state key="normal" title="SEND">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnSendMessage:" destination="iMU-Vu-UMy" eventType="touchUpInside" id="BFS-H2-ZP5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCg-Qu-i3s">
                                         <rect key="frame" x="11" y="50" width="42" height="30"/>
@@ -507,6 +512,7 @@ The bartender asks, "Why the big pause?"</string>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="1Pc-Rs-SZy" id="Hji-zh-oRO"/>
+                        <outlet property="txtMessage" destination="7sY-c9-8Cc" id="gaW-ZR-Fpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvF-zf-dCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
