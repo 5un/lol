@@ -9,27 +9,26 @@
 import UIKit
 import Hyphenate
 
-protocol MatchedViewControllerDelegate {
+protocol MatedViewControllerDelegate {
     
-    func matchedViewControllerOnPositiveClickedWithPurpose(purpose: String)
-    func matchedViewControllerOnNoClickedWithPurpose(purpose: String)
+    func matedViewControllerOnPositiveClicked()
+    func matedViewControllerOnNegativeClicked()
     
 }
 
-class MatchedViewController: UIViewController, EMCallManagerDelegate {
+class MatedViewController: UIViewController, EMCallManagerDelegate {
     
-    var callId: String?
-    var delegate:MatchedViewControllerDelegate?
+    var delegate:MatedViewControllerDelegate?
     
     var matchLabel:String?
     var positiveButtonLabel: String?
     var negativeButtonLabel:String?
-    var purpose: String?
     
     @IBOutlet weak var lblMatch: UILabel!
     @IBOutlet weak var btnPositive: UIButton!
     @IBOutlet weak var btnNegative: UIButton!
-    @IBOutlet weak var lblTimer: UILabel!
+    @IBOutlet weak var imgProfile: UIImageView!
+    
     
     
     override func viewDidLoad() {
@@ -43,16 +42,14 @@ class MatchedViewController: UIViewController, EMCallManagerDelegate {
         if(positiveButtonLabel != nil) {
             btnPositive.setTitle(positiveButtonLabel!, for: .normal)
         }
-
+        
         if(negativeButtonLabel != nil) {
             btnNegative.setTitle(negativeButtonLabel!, for: .normal)
         }
         
-        btnPositive.layer.cornerRadius = 50.0
-        btnNegative.layer.cornerRadius = 50.0
+        btnPositive.layer.cornerRadius = 30.0
+        imgProfile.layer.cornerRadius = 75.0
         
-        lblTimer.isHidden = true
-
     }
     
     
@@ -61,15 +58,15 @@ class MatchedViewController: UIViewController, EMCallManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onCallClicked(_ sender: Any) {
-        delegate?.matchedViewControllerOnPositiveClickedWithPurpose(purpose: self.purpose!)
+    @IBAction func onChatClicked(_ sender: Any) {
+        delegate?.matedViewControllerOnPositiveClicked()
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func onNahClicked(_ sender: Any) {
-        delegate?.matchedViewControllerOnNoClickedWithPurpose(purpose: self.purpose!)
+    @IBAction func onLaterClicked(_ sender: Any) {
+        delegate?.matedViewControllerOnNegativeClicked()
         self.dismiss(animated: true, completion: nil)
-
+        
     }
     
     

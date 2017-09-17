@@ -164,7 +164,7 @@ The bartender asks, "Why the big pause?"</string>
                                     <constraint firstAttribute="height" constant="100" id="F8F-1q-lc1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
-                                <state key="normal" title="LOL">
+                                <state key="normal" title="HAH">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -329,7 +329,7 @@ The bartender asks, "Why the big pause?"</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGL-wo-gSA">
-                                                    <rect key="frame" x="83" y="39" width="315" height="21"/>
+                                                    <rect key="frame" x="83" y="39" width="284" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -373,7 +373,7 @@ The bartender asks, "Why the big pause?"</string>
         <!--Chat View Controller-->
         <scene sceneID="Pdh-PM-byw">
             <objects>
-                <viewController id="iMU-Vu-UMy" customClass="ChatViewController" customModule="LolMate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatViewController" id="iMU-Vu-UMy" customClass="ChatViewController" customModule="LolMate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pes-xG-hYF"/>
                         <viewControllerLayoutGuide type="bottom" id="su0-zB-H91"/>
@@ -574,7 +574,7 @@ The bartender asks, "Why the big pause?"</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZy-aC-o25">
                                 <rect key="frame" x="119" y="281" width="136" height="42"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -634,8 +634,8 @@ The bartender asks, "Why the big pause?"</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1o-my-zoK">
-                                <rect key="frame" x="99" y="66" width="177.5" height="33"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <rect key="frame" x="92" y="66" width="191.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -726,6 +726,92 @@ The bartender asks, "Why the big pause?"</string>
             </objects>
             <point key="canvasLocation" x="3400.8000000000002" y="-595.05247376311854"/>
         </scene>
+        <!--Mated View Controller-->
+        <scene sceneID="QUw-7Z-0Qa">
+            <objects>
+                <viewController storyboardIdentifier="matedViewController" id="Jej-gU-9ZQ" customClass="MatedViewController" customModule="LolMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z1V-CC-cD9"/>
+                        <viewControllerLayoutGuide type="bottom" id="9QL-cW-A3t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6nt-lg-jmV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy-user-f-1" translatesAutoresizingMaskIntoConstraints="NO" id="0H1-z2-A1G">
+                                <rect key="frame" x="112.5" y="130" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="AVH-1v-bSk"/>
+                                    <constraint firstAttribute="height" constant="150" id="uMa-mQ-0f2"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You and crystal are mates!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIP-HO-Iv9">
+                                <rect key="frame" x="48.5" y="320" width="278.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8j2-VU-JXA">
+                                <rect key="frame" x="39.5" y="384" width="295" height="60"/>
+                                <color key="backgroundColor" red="0.32065152460000002" green="0.70890724569999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Hb8-B9-nAZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="START CHAT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChatClicked:" destination="Jej-gU-9ZQ" eventType="touchUpInside" id="8aa-Vw-EWr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcG-fp-Qy9">
+                                <rect key="frame" x="137" y="452" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="fjK-SX-pPZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="yJ3-Me-cwN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                <state key="normal" title="LATER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLaterClicked:" destination="Jej-gU-9ZQ" eventType="touchUpInside" id="sjV-7e-iVO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDp-Eg-zt2">
+                                <rect key="frame" x="91.5" y="57" width="191.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97921770811080933" green="0.17792163862784457" blue="0.3320041056720604" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0H1-z2-A1G" firstAttribute="centerX" secondItem="6nt-lg-jmV" secondAttribute="centerX" id="2Ys-di-kJz"/>
+                            <constraint firstItem="aIP-HO-Iv9" firstAttribute="centerX" secondItem="6nt-lg-jmV" secondAttribute="centerX" id="2qV-s8-vb7"/>
+                            <constraint firstItem="FDp-Eg-zt2" firstAttribute="centerX" secondItem="6nt-lg-jmV" secondAttribute="centerX" id="3Ug-SP-bNc"/>
+                            <constraint firstItem="FDp-Eg-zt2" firstAttribute="top" secondItem="Z1V-CC-cD9" secondAttribute="bottom" constant="37" id="4gf-sN-6xB"/>
+                            <constraint firstItem="8j2-VU-JXA" firstAttribute="centerX" secondItem="6nt-lg-jmV" secondAttribute="centerX" id="9ew-tz-GBg"/>
+                            <constraint firstItem="0H1-z2-A1G" firstAttribute="top" secondItem="FDp-Eg-zt2" secondAttribute="bottom" constant="40" id="Ans-MY-Klv"/>
+                            <constraint firstItem="8j2-VU-JXA" firstAttribute="top" secondItem="aIP-HO-Iv9" secondAttribute="bottom" constant="31" id="Cva-WE-Zk5"/>
+                            <constraint firstItem="aIP-HO-Iv9" firstAttribute="top" secondItem="0H1-z2-A1G" secondAttribute="bottom" constant="40" id="EaL-5f-PYH"/>
+                            <constraint firstItem="TcG-fp-Qy9" firstAttribute="centerX" secondItem="6nt-lg-jmV" secondAttribute="centerX" id="ICe-Ak-WQ7"/>
+                            <constraint firstItem="8j2-VU-JXA" firstAttribute="width" secondItem="6nt-lg-jmV" secondAttribute="width" constant="-80" id="SgC-Ph-rkm"/>
+                            <constraint firstItem="TcG-fp-Qy9" firstAttribute="top" secondItem="8j2-VU-JXA" secondAttribute="bottom" constant="8" id="srR-tv-0dY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNegative" destination="TcG-fp-Qy9" id="a0g-7R-Fsm"/>
+                        <outlet property="btnPositive" destination="8j2-VU-JXA" id="Dpg-SG-Ico"/>
+                        <outlet property="imgProfile" destination="0H1-z2-A1G" id="91L-RZ-Z4Q"/>
+                        <outlet property="lblMatch" destination="aIP-HO-Iv9" id="peF-cE-qwb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grG-T4-dr1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4176.8000000000002" y="-594.15292353823088"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nzy-ON-Yqf">
             <objects>
@@ -747,6 +833,7 @@ The bartender asks, "Why the big pause?"</string>
         </scene>
     </scenes>
     <resources>
+        <image name="dummy-user-f-1" width="50" height="50"/>
         <image name="dummy-user-image" width="1738" height="2607"/>
         <image name="icon-double-lol" width="120" height="120"/>
         <image name="icon-handshake" width="50" height="50"/>

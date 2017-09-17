@@ -12,6 +12,7 @@ import Hyphenate
 import pop
 
 class JokesViewController: UIViewController, UIViewControllerTransitioningDelegate, MatchedViewControllerDelegate {
+
     
     @IBOutlet weak var btnLol: UIButton!
     @IBOutlet weak var btnNo: UIButton!
@@ -19,8 +20,7 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
     @IBOutlet weak var lblJokeText: UILabel!
     
     var dummyJokeIndex = 0
-    
-    
+    var mockMatchCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
         viewJokeCard.layer.shadowOpacity = 0.3
         viewJokeCard.layer.shadowRadius = 4.0
         
-        lblJokeText.text = ""
+        lblJokeText.text = "Get ready to LOL!"
         
     }
     
@@ -62,7 +62,13 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
         spring?.springSpeed = 5
         btnLol.layer.pop_add(spring!, forKey: "animSize")
         
-        matchedUser()
+        if(mockMatchCount + 1 < 10) {
+            mockMatchCount += 1
+        } else {
+            mockMatchCount = 0
+            matchedUser()
+        }
+        
         nextJoke()
 
     }
@@ -116,6 +122,7 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
         //vc?.transitioningDelegate = self
         if let mvc = vc as? MatchedViewController {
             mvc.delegate = self
+            mvc.purpose = "match"
         }
         vc?.modalPresentationStyle = UIModalPresentationStyle.formSheet
         
@@ -130,15 +137,17 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
         return DismissingAnimationController()
     }
     
-    func matchedViewControllerOnCallClicked() {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "callViewController") as? CallViewController
-        if(vc != nil) {
-            vc!.callee = "crystal"
-            self.navigationController?.pushViewController(vc!, animated: true)
+    func matchedViewControllerOnPositiveClickedWithPurpose(purpose: String) {
+        if(purpose == "match") {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "callViewController") as? CallViewController
+            if(vc != nil) {
+                vc!.callee = "crystal"
+                self.navigationController?.pushViewController(vc!, animated: true)
+            }
         }
     }
     
-    func matchedViewControllerOnNoClicked() {
+    func matchedViewControllerOnNoClickedWithPurpose(purpose: String) {
         
     }
     

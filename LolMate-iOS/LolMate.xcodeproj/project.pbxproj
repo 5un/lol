@@ -17,6 +17,7 @@
 		A465BBC71F6E447100560A13 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465BBC61F6E447100560A13 /* AppConstants.swift */; };
 		A465BBD11F6E4C7C00560A13 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A465BBD01F6E4C7C00560A13 /* Image.xcassets */; };
 		A465BBD31F6E51CE00560A13 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465BBD21F6E51CD00560A13 /* SignUpViewController.swift */; };
+		A46F4B141F6EC0C900E9E00A /* MatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46F4B131F6EC0C900E9E00A /* MatedViewController.swift */; };
 		A48948301F6E242800A0C0C3 /* MatchedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A489482F1F6E242800A0C0C3 /* MatchedUserViewController.swift */; };
 		A48948321F6E2BBC00A0C0C3 /* CallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48948311F6E2BBC00A0C0C3 /* CallViewController.swift */; };
 		A4D0C3871F6DF11E00F64BE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3861F6DF11E00F64BE8 /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 		A465BBC61F6E447100560A13 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		A465BBD01F6E4C7C00560A13 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		A465BBD21F6E51CD00560A13 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A46F4B131F6EC0C900E9E00A /* MatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatedViewController.swift; sourceTree = "<group>"; };
 		A489482F1F6E242800A0C0C3 /* MatchedUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedUserViewController.swift; sourceTree = "<group>"; };
 		A48948311F6E2BBC00A0C0C3 /* CallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallViewController.swift; sourceTree = "<group>"; };
 		A4D0C3831F6DF11E00F64BE8 /* LolMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +191,7 @@
 				A465BBD21F6E51CD00560A13 /* SignUpViewController.swift */,
 				A4EBDA571F6E5FB200643C93 /* ChatViewController.swift */,
 				A44C2FD81F6EAA4F004B2093 /* MatchedViewController.swift */,
+				A46F4B131F6EC0C900E9E00A /* MatedViewController.swift */,
 				A4D0C38A1F6DF11E00F64BE8 /* Main.storyboard */,
 				A4D0C38D1F6DF11E00F64BE8 /* Assets.xcassets */,
 				A4D0C38F1F6DF11E00F64BE8 /* LaunchScreen.storyboard */,
@@ -448,6 +451,7 @@
 				A465BBC21F6E41A300560A13 /* LOLAPI.swift in Sources */,
 				A4EBDA581F6E5FB200643C93 /* ChatViewController.swift in Sources */,
 				A4D0C3871F6DF11E00F64BE8 /* AppDelegate.swift in Sources */,
+				A46F4B141F6EC0C900E9E00A /* MatedViewController.swift in Sources */,
 				A44C2FDE1F6EAC74004B2093 /* DismissingAnimationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
