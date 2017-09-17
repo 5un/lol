@@ -1,8 +1,8 @@
 # TODO
 
-* Mock Alamofire
+* Hypenate Integration
 * Mock Alamofire Image
 * Agora Integration
-* Hypenate Integration
 * Match Modal
 
+Contact Stuff

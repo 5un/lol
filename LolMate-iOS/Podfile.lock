@@ -3,17 +3,20 @@ PODS:
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
   - Hyphenate (3.3.4.1)
+  - MBProgressHUD (1.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireImage (~> 3.3)
   - Hyphenate (~> 3.3.2)
+  - MBProgressHUD (~> 1.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   Hyphenate: dc7709bf976ff7f23565d0902bec2d3f236ed67e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
 
-PODFILE CHECKSUM: f0f08da2b4f5562e3700b0e88d295a993596d233
+PODFILE CHECKSUM: 18f934f119dad69af109bb7071d966a0c0a611c0
 
 COCOAPODS: 1.2.0

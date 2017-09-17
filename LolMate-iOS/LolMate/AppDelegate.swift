@@ -14,11 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let options = EMOptions.init(appkey: "1500170916002645#lol")
+        let tabBar = UITabBar.appearance()
+        tabBar.barTintColor = UIColor.clear
+        tabBar.backgroundImage = UIImage()
+        tabBar.shadowImage = UIImage()
+        
+        let options = EMOptions.init(appkey: AppConstants.HYPHENATE_API_KEY)
         
         var apnsCerName = ""
         #if DEBUG
@@ -34,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         options?.usingHttpsOnly = true
         
         EMClient.shared().initializeSDK(with: options)
-        
         
         return true
     }
