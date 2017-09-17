@@ -34,7 +34,7 @@ class JokesViewController: UIViewController {
     
     @IBAction func btnLolClicked(_ sender: Any) {
         print("yes")
-        
+        callMatchedUser()
     }
     
     @IBAction func btnNeutralClicked(_ sender: Any) {
@@ -47,9 +47,10 @@ class JokesViewController: UIViewController {
 
     }
     
-    func videoCallMatchedUser() {
-        let callName = "user2"
-        EMClient.shared().callManager.start(EMCallTypeVideo, remoteName: callName, ext: <#T##String!#>, completion: <#T##((EMCallSession?, EMError?) -> Void)!##((EMCallSession?, EMError?) -> Void)!##(EMCallSession?, EMError?) -> Void#>)
+    func callMatchedUser() {
+        self.performSegue(withIdentifier: "callMatchedUser", sender: nil)
+        
+    
     }
     
 }
