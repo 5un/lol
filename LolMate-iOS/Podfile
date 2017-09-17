@@ -6,5 +6,7 @@ target 'LolMate' do
     pod 'Alamofire', '~> 4.5'
     pod 'AlamofireImage', '~> 3.3'
     pod 'Hyphenate', '~> 3.3.2'
-    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'MJRefresh'
+    pod 'MWPhotoBrowser', '~> 2.1.2'
+    pod 'DACircularProgress', '~> 2.3.1'
 end

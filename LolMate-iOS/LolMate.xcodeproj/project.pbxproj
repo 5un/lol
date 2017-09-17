@@ -24,6 +24,7 @@
 		A4D0C3A71F6DF11F00F64BE8 /* LolMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3A61F6DF11F00F64BE8 /* LolMateUITests.swift */; };
 		A4D0C3B51F6DF36F00F64BE8 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3B41F6DF36F00F64BE8 /* JokesViewController.swift */; };
 		A4EBDA581F6E5FB200643C93 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EBDA571F6E5FB200643C93 /* ChatViewController.swift */; };
+		A4EBDB1F1F6E6D7900643C93 /* EMMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EBDB1E1F6E6D7900643C93 /* EMMessageModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A4D0C3A81F6DF11F00F64BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D0C3B41F6DF36F00F64BE8 /* JokesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		A4EBDA571F6E5FB200643C93 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		A4EBDB1E1F6E6D7900643C93 /* EMMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMMessageModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,21 +125,16 @@
 		A465BBC81F6E44E900560A13 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A4EBDB1E1F6E6D7900643C93 /* EMMessageModel.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		A465BBC91F6E484300560A13 /* EM */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = EM;
 			sourceTree = "<group>";
 		};
 		A4D0C37A1F6DF11E00F64BE8 = {
 			isa = PBXGroup;
 			children = (
 				A465BBBE1F6E414C00560A13 /* Resources */,
+				A4EBDA591F6E62BA00643C93 /* Library */,
 				A4D0C3851F6DF11E00F64BE8 /* LolMate */,
 				A4D0C39A1F6DF11F00F64BE8 /* LolMateTests */,
 				A4D0C3A51F6DF11F00F64BE8 /* LolMateUITests */,
@@ -160,7 +157,6 @@
 		A4D0C3851F6DF11E00F64BE8 /* LolMate */ = {
 			isa = PBXGroup;
 			children = (
-				A465BBC91F6E484300560A13 /* EM */,
 				A465BBC81F6E44E900560A13 /* Models */,
 				A465BBC51F6E445E00560A13 /* Constants */,
 				A4D0C3B91F6DF3DD00F64BE8 /* CustomViews */,
@@ -213,6 +209,13 @@
 			children = (
 			);
 			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		A4EBDA591F6E62BA00643C93 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		E22E98E4AABCA1F68D04FABE /* Pods */ = {
@@ -417,6 +420,7 @@
 				A465BBC71F6E447100560A13 /* AppConstants.swift in Sources */,
 				A48948321F6E2BBC00A0C0C3 /* CallViewController.swift in Sources */,
 				A465BBC41F6E43EA00560A13 /* ProfileViewController.swift in Sources */,
+				A4EBDB1F1F6E6D7900643C93 /* EMMessageModel.swift in Sources */,
 				A465BBD31F6E51CE00560A13 /* SignUpViewController.swift in Sources */,
 				A465BBC21F6E41A300560A13 /* LOLAPI.swift in Sources */,
 				A4EBDA581F6E5FB200643C93 /* ChatViewController.swift in Sources */,
@@ -579,6 +583,11 @@
 				DEVELOPMENT_TEAM = 5CCBF76G84;
 				INFOPLIST_FILE = LolMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/EM/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/EM/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -595,6 +604,11 @@
 				DEVELOPMENT_TEAM = 5CCBF76G84;
 				INFOPLIST_FILE = LolMate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/EM/Utilities/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)$(LOCAL_LIBRARY_DIR)/EM/Utilities/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

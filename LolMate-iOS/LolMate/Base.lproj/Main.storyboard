@@ -328,11 +328,94 @@ The bartender asks, "Why the big pause?"</string>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="s3k-VU-jjF" id="DkX-i6-0ax"/>
+                        <segue destination="iMU-Vu-UMy" kind="show" identifier="showConversation" id="eLQ-Xr-CY5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Id8-X2-NoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1472.8" y="150.67466266866569"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="Pdh-PM-byw">
+            <objects>
+                <viewController id="iMU-Vu-UMy" customClass="ChatViewController" customModule="LolMate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pes-xG-hYF"/>
+                        <viewControllerLayoutGuide type="bottom" id="su0-zB-H91"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XWZ-J3-6gF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Pc-Rs-SZy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textMessageFromMe" rowHeight="100" id="XLL-7N-xZ3">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XLL-7N-xZ3" id="mQ0-44-6jW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CbC-fS-Lsv">
+                                                    <rect key="frame" x="15" y="11" width="50" height="50"/>
+                                                    <color key="backgroundColor" red="0.84581560863874339" green="0.84581560863874339" blue="0.84581560863874339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="tpG-eI-835"/>
+                                                        <constraint firstAttribute="width" constant="50" id="uCU-2i-tV3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view tag="2" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PUl-cV-Xel">
+                                                    <rect key="frame" x="82" y="11" width="80" height="73"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ1-rr-22v">
+                                                            <rect key="frame" x="14" y="13" width="245" height="40"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="0.1883317595" blue="0.50403283409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="AQ1-rr-22v" secondAttribute="trailing" constant="9" id="J7M-WM-ykD"/>
+                                                        <constraint firstItem="AQ1-rr-22v" firstAttribute="leading" secondItem="PUl-cV-Xel" secondAttribute="leading" constant="14" id="c9u-jg-QEn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="AQ1-rr-22v" secondAttribute="bottom" constant="9" id="dCr-qE-WiZ"/>
+                                                        <constraint firstItem="AQ1-rr-22v" firstAttribute="top" secondItem="PUl-cV-Xel" secondAttribute="top" constant="13" id="h27-p7-NY2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PUl-cV-Xel" firstAttribute="leading" secondItem="CbC-fS-Lsv" secondAttribute="trailing" constant="17" id="0nc-rx-Vce"/>
+                                                <constraint firstItem="CbC-fS-Lsv" firstAttribute="leading" secondItem="mQ0-44-6jW" secondAttribute="leadingMargin" constant="7" id="2Zy-0G-tK8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="PUl-cV-Xel" secondAttribute="bottom" constant="7.5" id="945-Ex-Zoz"/>
+                                                <constraint firstItem="CbC-fS-Lsv" firstAttribute="top" secondItem="mQ0-44-6jW" secondAttribute="topMargin" constant="3" id="AFg-io-Fxi"/>
+                                                <constraint firstItem="PUl-cV-Xel" firstAttribute="top" secondItem="CbC-fS-Lsv" secondAttribute="top" id="eVx-PX-Ca9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iMU-Vu-UMy" id="c1a-Ls-hjY"/>
+                                    <outlet property="delegate" destination="iMU-Vu-UMy" id="Uj7-dS-G2q"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Pc-Rs-SZy" secondAttribute="trailing" constant="-16" id="0hc-yH-9oj"/>
+                            <constraint firstItem="1Pc-Rs-SZy" firstAttribute="leading" secondItem="XWZ-J3-6gF" secondAttribute="leadingMargin" constant="-16" id="8JS-ip-sD4"/>
+                            <constraint firstItem="1Pc-Rs-SZy" firstAttribute="top" secondItem="Pes-xG-hYF" secondAttribute="bottom" constant="-64" id="ZX6-xz-KKL"/>
+                            <constraint firstItem="su0-zB-H91" firstAttribute="top" secondItem="1Pc-Rs-SZy" secondAttribute="bottom" constant="-49" id="ptK-L8-7NF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="1Pc-Rs-SZy" id="Hji-zh-oRO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kvF-zf-dCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2536.8000000000002" y="150.67466266866569"/>
         </scene>
         <!--Call View Controller-->
         <scene sceneID="dm5-61-xlJ">
@@ -395,7 +478,7 @@ The bartender asks, "Why the big pause?"</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNs-i8-Uam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2388" y="-317.09145427286359"/>
+            <point key="canvasLocation" x="2537" y="-595"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Nzy-ON-Yqf">

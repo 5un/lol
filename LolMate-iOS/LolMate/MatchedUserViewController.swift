@@ -16,6 +16,7 @@ class MatchedUserViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     var contacts:[Any]?
+    var selectedUser:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class MatchedUserViewController: UIViewController, UITableViewDataSource, UITabl
         }
         
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
     }
@@ -71,7 +73,23 @@ class MatchedUserViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //TODO: OpenChat
+        let user = contacts?[indexPath.row]
+        selectedUser = user as! String
+        self.performSegue(withIdentifier: "showConversation", sender: nil)
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "showConversation") {
+            if segue.destination is ChatViewController {
+                let vc = segue.destination as! ChatViewController
+                vc.conversationId = selectedUser!
+            }
+        }
+    }
+    
+    
 
 }
 
