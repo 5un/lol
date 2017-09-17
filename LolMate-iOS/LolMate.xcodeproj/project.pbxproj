@@ -23,6 +23,7 @@
 		A4D0C39C1F6DF11F00F64BE8 /* LolMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C39B1F6DF11F00F64BE8 /* LolMateTests.swift */; };
 		A4D0C3A71F6DF11F00F64BE8 /* LolMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3A61F6DF11F00F64BE8 /* LolMateUITests.swift */; };
 		A4D0C3B51F6DF36F00F64BE8 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3B41F6DF36F00F64BE8 /* JokesViewController.swift */; };
+		A4EBDA581F6E5FB200643C93 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EBDA571F6E5FB200643C93 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A4D0C3A61F6DF11F00F64BE8 /* LolMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolMateUITests.swift; sourceTree = "<group>"; };
 		A4D0C3A81F6DF11F00F64BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4D0C3B41F6DF36F00F64BE8 /* JokesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
+		A4EBDA571F6E5FB200643C93 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				A48948311F6E2BBC00A0C0C3 /* CallViewController.swift */,
 				A489482F1F6E242800A0C0C3 /* MatchedUserViewController.swift */,
 				A465BBD21F6E51CD00560A13 /* SignUpViewController.swift */,
+				A4EBDA571F6E5FB200643C93 /* ChatViewController.swift */,
 				A4D0C38A1F6DF11E00F64BE8 /* Main.storyboard */,
 				A4D0C38D1F6DF11E00F64BE8 /* Assets.xcassets */,
 				A4D0C38F1F6DF11E00F64BE8 /* LaunchScreen.storyboard */,
@@ -416,6 +419,7 @@
 				A465BBC41F6E43EA00560A13 /* ProfileViewController.swift in Sources */,
 				A465BBD31F6E51CE00560A13 /* SignUpViewController.swift in Sources */,
 				A465BBC21F6E41A300560A13 /* LOLAPI.swift in Sources */,
+				A4EBDA581F6E5FB200643C93 /* ChatViewController.swift in Sources */,
 				A4D0C3871F6DF11E00F64BE8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
