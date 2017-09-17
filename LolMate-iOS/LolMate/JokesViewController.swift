@@ -27,6 +27,16 @@ class JokesViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // Must handle incoming call
+        
+        //TODO: check match info
+        
+        LOLAPI.getNextJoke { (joke) in
+            print("--- Next Joke: \(joke)")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,23 +44,36 @@ class JokesViewController: UIViewController {
     
     @IBAction func btnLolClicked(_ sender: Any) {
         print("yes")
+        //TODO: Call the API
+        
         callMatchedUser()
+        nextJoke()
+
     }
     
     @IBAction func btnNeutralClicked(_ sender: Any) {
         print("neutral")
+        nextJoke()
+        
 
     }
     
     @IBAction func btnNoClicked(_ sender: Any) {
         print("no")
+        nextJoke()
 
+
+    }
+    
+    func nextJoke() {
+        LOLAPI.getNextJoke { (joke) in
+            print("--- Next Joke: \(joke)")
+        }
     }
     
     func callMatchedUser() {
         self.performSegue(withIdentifier: "callMatchedUser", sender: nil)
         
-    
     }
     
 }

@@ -41,9 +41,12 @@ class CallViewController: UIViewController, EMCallManagerDelegate {
     @IBAction func btnLeaveClicked(_ sender: Any) {
         if(callId != nil) {
             EMClient.shared().callManager.endCall!(callId!, reason: EMCallEndReasonHangup)
+            
+            // Send something to notification controller if matched
+            
+            self.navigationController?.popViewController(animated: true)
         }
     }
-    
     
     func callDidReceive(_ aSession: EMCallSession!) {
         print("--- callDidReceive")
