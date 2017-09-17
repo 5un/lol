@@ -10,6 +10,8 @@
 import UIKit
 import Hyphenate
 import pop
+import Alamofire
+import AlamofireImage
 
 class JokesViewController: UIViewController, UIViewControllerTransitioningDelegate, MatchedViewControllerDelegate {
 
@@ -18,6 +20,8 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
     @IBOutlet weak var btnNo: UIButton!
     @IBOutlet weak var viewJokeCard: UIView!
     @IBOutlet weak var lblJokeText: UILabel!
+    @IBOutlet weak var imgJoke: UIImageView!
+    
     
     var dummyJokeIndex = 0
     var mockMatchCount = 0
@@ -88,6 +92,7 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
     }
     
     func nextJoke() {
+        
         LOLAPI.getNextJoke { (joke) in
             print("--- Next Joke: \(joke)")
             
@@ -99,13 +104,30 @@ class JokesViewController: UIViewController, UIViewControllerTransitioningDelega
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 
-                if(joke == nil) {
-                    self.lblJokeText.text = MockData.jokes[self.dummyJokeIndex]["joke"]
-                    if(self.dummyJokeIndex + 1 < MockData.jokes.count) {
-                        self.dummyJokeIndex += 1
-                    } else {
-                        self.dummyJokeIndex = 0
+                self.imgJoke.isHidden = true
+                self.imgJoke.image = nil
+                self.imgJoke.alpha = 0.0
+                
+                let joke = MockData.jokes[self.dummyJokeIndex]
+                if(joke["image"] != nil) {
+                    Alamofire.request(joke["image"]!).responseImage { response in
+                        if let image = response.result.value {
+                            self.imgJoke.image = image
+                            self.imgJoke.isHidden = false
+                            self.imgJoke.alpha = 1.0
+                        }
                     }
+                    
+                } else {
+                    self.lblJokeText.text = joke["joke"]
+                    
+
+                }
+                
+                if(self.dummyJokeIndex + 1 < MockData.jokes.count) {
+                    self.dummyJokeIndex += 1
+                } else {
+                    self.dummyJokeIndex = 0
                 }
                 
                 let spring = POPSpringAnimation(propertyNamed: kPOPLayerScaleXY)
