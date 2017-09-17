@@ -53,13 +53,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="LOL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-tY-Brn">
-                                <rect key="frame" x="60" y="177" width="255" height="130"/>
+                                <rect key="frame" x="60" y="156" width="255" height="66"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="72"/>
                                 <color key="textColor" red="1" green="0.1883317595" blue="0.50403283409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find ones to share your laughter with." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2d-R6-7uv">
-                                <rect key="frame" x="60" y="299" width="255" height="68"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find somebody to share your laughter with. 😂" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2d-R6-7uv">
+                                <rect key="frame" x="60" y="318" width="255" height="98.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
                                 <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -76,6 +76,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MATE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dek-qR-3Vh">
+                                <rect key="frame" x="60" y="215" width="255" height="53"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="1" green="0.1883317595" blue="0.50403283409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -84,14 +90,16 @@
                             <constraint firstItem="lX8-ui-bTE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="AyW-tc-9Er"/>
                             <constraint firstItem="dfg-tY-Brn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CGr-4V-fNM"/>
                             <constraint firstItem="z2d-R6-7uv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-120" id="CMf-g7-mAf"/>
-                            <constraint firstItem="dfg-tY-Brn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="157" id="EmK-71-beW"/>
+                            <constraint firstItem="z2d-R6-7uv" firstAttribute="top" secondItem="dek-qR-3Vh" secondAttribute="bottom" constant="15" id="Dqz-ni-lw0"/>
+                            <constraint firstItem="dfg-tY-Brn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="EmK-71-beW"/>
                             <constraint firstItem="z2d-R6-7uv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lr8-1C-imh"/>
                             <constraint firstItem="xFo-T5-yQo" firstAttribute="width" secondItem="5bf-ar-x5L" secondAttribute="width" id="RcQ-JO-fmE"/>
+                            <constraint firstItem="dek-qR-3Vh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z7g-fG-Kod"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lX8-ui-bTE" secondAttribute="trailing" constant="32" id="bjo-4N-n0X"/>
                             <constraint firstItem="lX8-ui-bTE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bm9-0P-02F"/>
                             <constraint firstItem="5bf-ar-x5L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hFA-3G-Ndv"/>
+                            <constraint firstItem="dek-qR-3Vh" firstAttribute="top" secondItem="dfg-tY-Brn" secondAttribute="bottom" constant="-20" id="hub-A9-d2G"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lX8-ui-bTE" secondAttribute="bottom" constant="60" id="iXe-g4-SDX"/>
-                            <constraint firstItem="z2d-R6-7uv" firstAttribute="top" secondItem="dfg-tY-Brn" secondAttribute="bottom" constant="-8" id="jPs-A0-pVe"/>
                             <constraint firstItem="5bf-ar-x5L" firstAttribute="width" secondItem="lX8-ui-bTE" secondAttribute="width" id="oNt-Ik-oj6"/>
                             <constraint firstItem="lX8-ui-bTE" firstAttribute="top" secondItem="5bf-ar-x5L" secondAttribute="bottom" constant="16" id="sOp-dX-O2g"/>
                         </constraints>
@@ -738,7 +746,7 @@ The bartender asks, "Why the big pause?"</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy-user-f-1" translatesAutoresizingMaskIntoConstraints="NO" id="0H1-z2-A1G">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy-user-f-1" translatesAutoresizingMaskIntoConstraints="NO" id="0H1-z2-A1G">
                                 <rect key="frame" x="112.5" y="130" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="AVH-1v-bSk"/>

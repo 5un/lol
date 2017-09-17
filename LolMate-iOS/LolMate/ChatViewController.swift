@@ -18,7 +18,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var txtMessage: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +35,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        _loadMoreMessage()
+        _loadInitialMessage()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -61,7 +60,6 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             // (cell as! EMChatBaseCell).delegate = self
             if let img = cell?.viewWithTag(1) as? UIImageView {
                 img.layer.cornerRadius = 25.0
-                
             }
             
             let view = cell?.viewWithTag(2)
@@ -95,6 +93,31 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         _dataSource?.append(model)
     }
     
+    func _loadInitialMessage() {
+        weak var weakSelf = self
+        DispatchQueue.global().async {
+            var messageId = ""
+            if (weakSelf?._dataSource?.count)! > 0 {
+                let model = weakSelf?._dataSource?[0]
+                messageId = model!.message!.messageId
+            }
+            
+            weakSelf?.conversation?.loadMessagesStart(fromId: messageId.characters.count > 0 ? messageId : nil, count: 20, searchDirection: EMMessageSearchDirectionUp, completion: { (messages, error) in
+                if error == nil {
+                    for message in messages as! Array<EMMessage> {
+                        let model = EMMessageModel.init(withMesage: message)
+                        self._dataSource?.append(model)
+                    }
+                }
+                
+                // weakSelf?._refresh?.endRefreshing()
+                
+                weakSelf?.tableView.reloadData()
+                
+            })
+        }
+    }
+    
     func _loadMoreMessage() {
         weak var weakSelf = self
         DispatchQueue.global().async {
@@ -104,7 +127,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 messageId = model!.message!.messageId
             }
             
-            weakSelf?.conversation?.loadMessagesStart(fromId: messageId.characters.count > 0 ? messageId : nil, count: 20, searchDirection: EMMessageSearchDirectionDown, completion: { (messages, error) in
+            weakSelf?.conversation?.loadMessagesStart(fromId: messageId.characters.count > 0 ? messageId : nil, count: 20, searchDirection: EMMessageSearchDirectionUp, completion: { (messages, error) in
                 if error == nil {
                     for message in messages as! Array<EMMessage> {
                         let model = EMMessageModel.init(withMesage: message)
