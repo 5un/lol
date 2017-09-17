@@ -1,0 +1,21 @@
+{
+  "name": "lolmate-web",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hyphenate-web": "^1.5.1",
+    "next": "^3.2.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}

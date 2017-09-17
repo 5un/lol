@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		913BFE30A9F2AC157B3F34AB /* Pods_LolMate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D28CBB90A641C340F912500 /* Pods_LolMate.framework */; };
+		A4D0C3871F6DF11E00F64BE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3861F6DF11E00F64BE8 /* AppDelegate.swift */; };
+		A4D0C3891F6DF11E00F64BE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3881F6DF11E00F64BE8 /* ViewController.swift */; };
+		A4D0C38C1F6DF11E00F64BE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D0C38A1F6DF11E00F64BE8 /* Main.storyboard */; };
+		A4D0C38E1F6DF11E00F64BE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D0C38D1F6DF11E00F64BE8 /* Assets.xcassets */; };
+		A4D0C3911F6DF11E00F64BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D0C38F1F6DF11E00F64BE8 /* LaunchScreen.storyboard */; };
+		A4D0C39C1F6DF11F00F64BE8 /* LolMateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C39B1F6DF11F00F64BE8 /* LolMateTests.swift */; };
+		A4D0C3A71F6DF11F00F64BE8 /* LolMateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3A61F6DF11F00F64BE8 /* LolMateUITests.swift */; };
+		A4D0C3B51F6DF36F00F64BE8 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D0C3B41F6DF36F00F64BE8 /* JokesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4D0C3981F6DF11F00F64BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4D0C37B1F6DF11E00F64BE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4D0C3821F6DF11E00F64BE8;
+			remoteInfo = LolMate;
+		};
+		A4D0C3A31F6DF11F00F64BE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4D0C37B1F6DF11E00F64BE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4D0C3821F6DF11E00F64BE8;
+			remoteInfo = LolMate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B92DA52A15F81C0249ABD08 /* Pods-LolMate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolMate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LolMate/Pods-LolMate.debug.xcconfig"; sourceTree = "<group>"; };
+		5D28CBB90A641C340F912500 /* Pods_LolMate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LolMate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68591AA3CD414DAB59253E31 /* Pods-LolMate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LolMate.release.xcconfig"; path = "Pods/Target Support Files/Pods-LolMate/Pods-LolMate.release.xcconfig"; sourceTree = "<group>"; };
+		A4D0C3831F6DF11E00F64BE8 /* LolMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LolMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D0C3861F6DF11E00F64BE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4D0C3881F6DF11E00F64BE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4D0C38B1F6DF11E00F64BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4D0C38D1F6DF11E00F64BE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4D0C3901F6DF11E00F64BE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4D0C3921F6DF11E00F64BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D0C3971F6DF11F00F64BE8 /* LolMateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolMateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D0C39B1F6DF11F00F64BE8 /* LolMateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolMateTests.swift; sourceTree = "<group>"; };
+		A4D0C39D1F6DF11F00F64BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D0C3A21F6DF11F00F64BE8 /* LolMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LolMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4D0C3A61F6DF11F00F64BE8 /* LolMateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LolMateUITests.swift; sourceTree = "<group>"; };
+		A4D0C3A81F6DF11F00F64BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4D0C3B41F6DF36F00F64BE8 /* JokesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4D0C3801F6DF11E00F64BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				913BFE30A9F2AC157B3F34AB /* Pods_LolMate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4D0C3941F6DF11F00F64BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4D0C39F1F6DF11F00F64BE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EF87FB5552970BE9FBF348C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D28CBB90A641C340F912500 /* Pods_LolMate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4D0C37A1F6DF11E00F64BE8 = {
+			isa = PBXGroup;
+			children = (
+				A4D0C3851F6DF11E00F64BE8 /* LolMate */,
+				A4D0C39A1F6DF11F00F64BE8 /* LolMateTests */,
+				A4D0C3A51F6DF11F00F64BE8 /* LolMateUITests */,
+				A4D0C3841F6DF11E00F64BE8 /* Products */,
+				E22E98E4AABCA1F68D04FABE /* Pods */,
+				0EF87FB5552970BE9FBF348C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4D0C3841F6DF11E00F64BE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0C3831F6DF11E00F64BE8 /* LolMate.app */,
+				A4D0C3971F6DF11F00F64BE8 /* LolMateTests.xctest */,
+				A4D0C3A21F6DF11F00F64BE8 /* LolMateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4D0C3851F6DF11E00F64BE8 /* LolMate */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0C3B91F6DF3DD00F64BE8 /* custom-views */,
+				A4D0C3B81F6DF3C900F64BE8 /* service */,
+				A4D0C3861F6DF11E00F64BE8 /* AppDelegate.swift */,
+				A4D0C3881F6DF11E00F64BE8 /* ViewController.swift */,
+				A4D0C3B41F6DF36F00F64BE8 /* JokesViewController.swift */,
+				A4D0C38A1F6DF11E00F64BE8 /* Main.storyboard */,
+				A4D0C38D1F6DF11E00F64BE8 /* Assets.xcassets */,
+				A4D0C38F1F6DF11E00F64BE8 /* LaunchScreen.storyboard */,
+				A4D0C3921F6DF11E00F64BE8 /* Info.plist */,
+			);
+			path = LolMate;
+			sourceTree = "<group>";
+		};
+		A4D0C39A1F6DF11F00F64BE8 /* LolMateTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0C39B1F6DF11F00F64BE8 /* LolMateTests.swift */,
+				A4D0C39D1F6DF11F00F64BE8 /* Info.plist */,
+			);
+			path = LolMateTests;
+			sourceTree = "<group>";
+		};
+		A4D0C3A51F6DF11F00F64BE8 /* LolMateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4D0C3A61F6DF11F00F64BE8 /* LolMateUITests.swift */,
+				A4D0C3A81F6DF11F00F64BE8 /* Info.plist */,
+			);
+			path = LolMateUITests;
+			sourceTree = "<group>";
+		};
+		A4D0C3B81F6DF3C900F64BE8 /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		A4D0C3B91F6DF3DD00F64BE8 /* custom-views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "custom-views";
+			sourceTree = "<group>";
+		};
+		E22E98E4AABCA1F68D04FABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B92DA52A15F81C0249ABD08 /* Pods-LolMate.debug.xcconfig */,
+				68591AA3CD414DAB59253E31 /* Pods-LolMate.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4D0C3821F6DF11E00F64BE8 /* LolMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4D0C3AB1F6DF11F00F64BE8 /* Build configuration list for PBXNativeTarget "LolMate" */;
+			buildPhases = (
+				CBB89709AE6F98D57252F948 /* [CP] Check Pods Manifest.lock */,
+				A4D0C37F1F6DF11E00F64BE8 /* Sources */,
+				A4D0C3801F6DF11E00F64BE8 /* Frameworks */,
+				A4D0C3811F6DF11E00F64BE8 /* Resources */,
+				A489509C0446392615F1870B /* [CP] Embed Pods Frameworks */,
+				9F9EDC3ED99936866F4707E8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LolMate;
+			productName = LolMate;
+			productReference = A4D0C3831F6DF11E00F64BE8 /* LolMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4D0C3961F6DF11F00F64BE8 /* LolMateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4D0C3AE1F6DF11F00F64BE8 /* Build configuration list for PBXNativeTarget "LolMateTests" */;
+			buildPhases = (
+				A4D0C3931F6DF11F00F64BE8 /* Sources */,
+				A4D0C3941F6DF11F00F64BE8 /* Frameworks */,
+				A4D0C3951F6DF11F00F64BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4D0C3991F6DF11F00F64BE8 /* PBXTargetDependency */,
+			);
+			name = LolMateTests;
+			productName = LolMateTests;
+			productReference = A4D0C3971F6DF11F00F64BE8 /* LolMateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4D0C3A11F6DF11F00F64BE8 /* LolMateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4D0C3B11F6DF11F00F64BE8 /* Build configuration list for PBXNativeTarget "LolMateUITests" */;
+			buildPhases = (
+				A4D0C39E1F6DF11F00F64BE8 /* Sources */,
+				A4D0C39F1F6DF11F00F64BE8 /* Frameworks */,
+				A4D0C3A01F6DF11F00F64BE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4D0C3A41F6DF11F00F64BE8 /* PBXTargetDependency */,
+			);
+			name = LolMateUITests;
+			productName = LolMateUITests;
+			productReference = A4D0C3A21F6DF11F00F64BE8 /* LolMateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4D0C37B1F6DF11E00F64BE8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = TCDisrupt;
+				TargetAttributes = {
+					A4D0C3821F6DF11E00F64BE8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					A4D0C3961F6DF11F00F64BE8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A4D0C3821F6DF11E00F64BE8;
+					};
+					A4D0C3A11F6DF11F00F64BE8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A4D0C3821F6DF11E00F64BE8;
+					};
+				};
+			};
+			buildConfigurationList = A4D0C37E1F6DF11E00F64BE8 /* Build configuration list for PBXProject "LolMate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4D0C37A1F6DF11E00F64BE8;
+			productRefGroup = A4D0C3841F6DF11E00F64BE8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4D0C3821F6DF11E00F64BE8 /* LolMate */,
+				A4D0C3961F6DF11F00F64BE8 /* LolMateTests */,
+				A4D0C3A11F6DF11F00F64BE8 /* LolMateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4D0C3811F6DF11E00F64BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D0C3911F6DF11E00F64BE8 /* LaunchScreen.storyboard in Resources */,
+				A4D0C38E1F6DF11E00F64BE8 /* Assets.xcassets in Resources */,
+				A4D0C38C1F6DF11E00F64BE8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4D0C3951F6DF11F00F64BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4D0C3A01F6DF11F00F64BE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F9EDC3ED99936866F4707E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LolMate/Pods-LolMate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A489509C0446392615F1870B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LolMate/Pods-LolMate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBB89709AE6F98D57252F948 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4D0C37F1F6DF11E00F64BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D0C3891F6DF11E00F64BE8 /* ViewController.swift in Sources */,
+				A4D0C3B51F6DF36F00F64BE8 /* JokesViewController.swift in Sources */,
+				A4D0C3871F6DF11E00F64BE8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4D0C3931F6DF11F00F64BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D0C39C1F6DF11F00F64BE8 /* LolMateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4D0C39E1F6DF11F00F64BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4D0C3A71F6DF11F00F64BE8 /* LolMateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4D0C3991F6DF11F00F64BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4D0C3821F6DF11E00F64BE8 /* LolMate */;
+			targetProxy = A4D0C3981F6DF11F00F64BE8 /* PBXContainerItemProxy */;
+		};
+		A4D0C3A41F6DF11F00F64BE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4D0C3821F6DF11E00F64BE8 /* LolMate */;
+			targetProxy = A4D0C3A31F6DF11F00F64BE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4D0C38A1F6DF11E00F64BE8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4D0C38B1F6DF11E00F64BE8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4D0C38F1F6DF11E00F64BE8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4D0C3901F6DF11E00F64BE8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4D0C3A91F6DF11F00F64BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4D0C3AA1F6DF11F00F64BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4D0C3AC1F6DF11F00F64BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B92DA52A15F81C0249ABD08 /* Pods-LolMate.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LolMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A4D0C3AD1F6DF11F00F64BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68591AA3CD414DAB59253E31 /* Pods-LolMate.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LolMate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A4D0C3AF1F6DF11F00F64BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LolMateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LolMate.app/LolMate";
+			};
+			name = Debug;
+		};
+		A4D0C3B01F6DF11F00F64BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LolMateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LolMate.app/LolMate";
+			};
+			name = Release;
+		};
+		A4D0C3B21F6DF11F00F64BE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LolMateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LolMate;
+			};
+			name = Debug;
+		};
+		A4D0C3B31F6DF11F00F64BE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LolMateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lolmate.LolMateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LolMate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4D0C37E1F6DF11E00F64BE8 /* Build configuration list for PBXProject "LolMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D0C3A91F6DF11F00F64BE8 /* Debug */,
+				A4D0C3AA1F6DF11F00F64BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4D0C3AB1F6DF11F00F64BE8 /* Build configuration list for PBXNativeTarget "LolMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D0C3AC1F6DF11F00F64BE8 /* Debug */,
+				A4D0C3AD1F6DF11F00F64BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4D0C3AE1F6DF11F00F64BE8 /* Build configuration list for PBXNativeTarget "LolMateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D0C3AF1F6DF11F00F64BE8 /* Debug */,
+				A4D0C3B01F6DF11F00F64BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4D0C3B11F6DF11F00F64BE8 /* Build configuration list for PBXNativeTarget "LolMateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D0C3B21F6DF11F00F64BE8 /* Debug */,
+				A4D0C3B31F6DF11F00F64BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4D0C37B1F6DF11E00F64BE8 /* Project object */;
+}
