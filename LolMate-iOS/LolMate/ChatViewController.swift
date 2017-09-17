@@ -52,7 +52,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // let CellIdentifier = EMChatBaseCell.cellIdentifier(forMessageModel: model)
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "textMessageFromMe")
+        let reuseIdentifier = ((model.message?.from)! == conversationId) ? "textMessageFromMe" : "textMessageToMe"
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
         if cell != nil {
             // cell = EMChatBaseCell.chatBaseCell(withMessageModel: model)
             // (cell as! EMChatBaseCell).delegate = self
